@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
+/* GENERAL */
 
 html,
 body {
@@ -10,16 +10,30 @@ body {
   --primary: #C5B377;
   --secondary: #393939;
   overflow-x: hidden;
+  max-width: 100vw;
+  --tablet: 1000px;
+  --phone: 768px;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.container {
+  margin: 0 10%;
+}
+
+@media only screen and (max-width: 1000px){
+  .container {
+    margin: 0 5%;
+  }
 }
 
 * {
   box-sizing: border-box;
 }
+
+
+/* TYPOGRAPHY */
+
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
+
 
 h1, h2, h3, h4, h5, h6, p, a{
   font-family: 'Tiro Devanagari Hindi', serif;
@@ -28,6 +42,22 @@ h1, h2, h3, h4, h5, h6, p, a{
 
 h1{font-size: 6em; font-weight: 300;}
 p, a{font-size: 1.5em;}
+
+.lightBackground h1{color: var(--primary);}
+.lightBackground p{color: var(--darkGrey);}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* BUTTONS */
+
+.buttonContainer{
+  display: flex;
+  gap: 10px;
+}
 
 .solidButton{
   background-color: var(--primary);
@@ -42,31 +72,8 @@ p, a{font-size: 1.5em;}
   border: 3px solid var(--primary);
   margin-top: 30px;
   padding: 7px 30px;
+  transition: 0.5s all;
 }
 
-.buttonContainer{
-  display: flex;
-  gap: 10px;
-}
+.borderedButton:hover{color: white; background-color: var(--primary);}
 
-.img1{ 
-  position: absolute; 
-  top: 0px;
-  right: -100px;
-  height: 450px;
-  z-index: 0;
-}
-
-.img2{
-  position: absolute; 
-  top: 300px;
-  right: 360px;
-  height: 500px;
-}
-
-.img3{
-  position: absolute; 
-  top: 800px;
-  right: 93px;
-  height: 200px;
-}

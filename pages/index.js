@@ -5,15 +5,15 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className={styles.container}>
+    <main className="container">
 
-      <div className={styles.banner}>
+      <section className={styles.heroBanner}>
       
       
-        <div className={`${styles.bannerTextWrapper} ${styles.lightBackground}`}>
-          <p className={styles.subHeadingTop}>Hello, I am</p>
+        <div className={`${styles.heroBannerTextWrapper} lightBackground`}>
+          <p>Hello, I am</p>
           <h1>SAMUEL JULE</h1>
-          <p className={styles.subHeadingBot}>Aspiring web-developer & designer in Jersey. 
+          <p>Aspiring web-developer & designer in Jersey. 
             Comfortable with pure CSS/HTML/JS & Wordpress, 
             learning frameworks such as React and Laravel.</p>
           <div className="buttonContainer">
@@ -21,12 +21,21 @@ export default function Home() {
             <Link href="/"><a className="borderedButton">Download CV</a></Link>
           </div>
         </div>
-        <img className="img1" src={"./grouville.jpg"} />
-        <img className="img2" src={"./me.jpg"} />
-        <img className="img3" src={"./cliff.jpg"} />
-      </div>
+        <img src={"./grouville.jpg"} />
+        <img src={"./me.jpg"} />
+        <img src={"./cliff.jpg"} />
+      </section>
 
-      
+
+      <section className={`${styles.workSection} ${styles.lightBackground}`}>
+
+        <div className={styles.workSectionBanner}>
+          
+        </div>
+
+      </section>
+
+      <div className='test'></div>
 
 
 
