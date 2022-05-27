@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #F3F3F3;
+  --primary: #C5B377;
+  --secondary: #393939;
+  overflow-x: hidden;
 }
 
 a {
@@ -13,4 +19,54 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, a{
+  font-family: 'Tiro Devanagari Hindi', serif;
+  color: var(--darkGrey);
+}
+
+h1{font-size: 6em; font-weight: 300;}
+p, a{font-size: 1.5em;}
+
+.solidButton{
+  background-color: var(--primary);
+  border: 3px solid var(--primary);
+  color: white;
+  margin-top: 30px;
+  padding: 7px 33px;
+}
+
+.borderedButton{
+  color: var(--primary);
+  border: 3px solid var(--primary);
+  margin-top: 30px;
+  padding: 7px 30px;
+}
+
+.buttonContainer{
+  display: flex;
+  gap: 10px;
+}
+
+.img1{ 
+  position: absolute; 
+  top: 0px;
+  right: -100px;
+  height: 450px;
+  z-index: 0;
+}
+
+.img2{
+  position: absolute; 
+  top: 300px;
+  right: 360px;
+  height: 500px;
+}
+
+.img3{
+  position: absolute; 
+  top: 800px;
+  right: 93px;
+  height: 200px;
 }
