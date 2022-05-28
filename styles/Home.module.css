@@ -28,22 +28,33 @@
 @media only screen and (max-width: 1000px){
   .heroBanner{
     justify-items: center;
+    max-width: 95%;
+    overflow-x: hidden;
   }
   .heroBannerTextWrapper{
-    width: 90vh;
+    width: 90vw;
+    padding: 40px;
   }
   .heroBanner img:nth-of-type(2), .heroBanner img:nth-of-type(3){
     display: none;
   }
 
   .heroBanner img:nth-of-type(1){
-    width: auto;
+    width: 100vw;
     margin: 0;
     left: 0;
     height: 50vh;
+    object-fit: cover;
   }
 }
 
+
+@media only screen and (max-width: 500px){
+  .heroBannerTextWrapper{
+    padding: 20px;
+    
+  }
+}
 /* hero images */
 
 @keyframes imageFloat {
@@ -58,7 +69,7 @@
 .heroBanner img:nth-of-type(1){
   top: 0px;
   right: -10vh;
-  height: 50vh;
+  height: 47vh;
   z-index: 0;
 }
 
@@ -114,4 +125,15 @@
 }
 
 
-
+@media only screen and (max-width: 1000px){
+  .workSectionBanner{
+    margin-left: -5vw;
+  }
+  .workSectionBanner::before{
+    left: -5vw;
+  }
+  .workSectionBanner::after{
+    right: -5vw;
+    background-color: var(--primary);
+  }
+  }

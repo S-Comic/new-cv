@@ -5,42 +5,49 @@ import Link from 'next/link'
 
 export default function Home() {
   return (
+
+    
+    <><Head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    </Head>
+    
+    
     <main className="container">
 
-      <section className={styles.heroBanner}>
-      
-      
-        <div className={`${styles.heroBannerTextWrapper} lightBackground`}>
-          <p>Hello, I am</p>
-          <h1>SAMUEL JULE</h1>
-          <p>Aspiring web-developer & designer in Jersey. 
-            Comfortable with pure CSS/HTML/JS & Wordpress, 
-            learning frameworks such as React and Laravel.</p>
-          <div className="buttonContainer">
-            <Link href="/"><a className="solidButton">Blog</a></Link>
-            <Link href="/"><a className="borderedButton">Download CV</a></Link>
+        <section className={styles.heroBanner}>
+
+
+          <div className={`${styles.heroBannerTextWrapper} lightBackground`}>
+            <p>Hello, I am</p>
+            <h1>SAMUEL JULE</h1>
+            <p>Aspiring web-developer & designer in Jersey.
+              Comfortable with pure CSS/HTML/JS & Wordpress,
+              learning frameworks such as React and Laravel.</p>
+            <div className="buttonContainer">
+              <Link href="/"><a className="solidButton">Blog</a></Link>
+              <Link href="/"><a className="borderedButton">Download CV</a></Link>
+            </div>
           </div>
-        </div>
-        <img src={"./grouville.jpg"} />
-        <img src={"./me.jpg"} />
-        <img src={"./cliff.jpg"} />
-      </section>
+          <img src={"./grouville.jpg"} />
+          <img src={"./me.jpg"} />
+          <img src={"./cliff.jpg"} />
+        </section>
 
 
-      <section className={`${styles.workSection} ${styles.lightBackground}`}>
+        <section className={`${styles.workSection} ${styles.lightBackground}`}>
 
-        <div className={styles.workSectionBanner}>
-          
-        </div>
+          <div className={styles.workSectionBanner}>
 
-      </section>
+          </div>
 
-      <div className='test'></div>
+        </section>
 
-
+        <div className='test'></div>
 
 
 
-    </main>
+
+
+      </main></>
   )
 }
