@@ -17,6 +17,8 @@ html,body {
 
 .container {
   margin: 0 var(--desktopMargin);
+  display: flex;
+  justify-content: center;
 }
 
 @media only screen and (max-width: 1000px){
