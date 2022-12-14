@@ -1,0 +1,209 @@
+/* === Broad Sections / Wrappers === */
+
+.sectionContainer{
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  overflow-y: hidden;
+  max-height: 100vh;
+  transition: 1s all;
+}
+
+.allContentWrapper{
+  background-color: #F3F3F3;
+  fill: var(--primary);
+  transition: 1s all;
+}
+.allContentWrapper.dark{
+  background-color: #363633;
+  color: #F3F3F3;
+  
+}
+
+/* === Hero Content === */
+.heroBanner{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.heroBannerTextWrapper{
+  width: 900px;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  z-index: 1;
+  padding: 60px;
+  margin-left: 00px;
+  background-color: none;
+  transition: 1s all;
+}
+
+.heroBannerTextWrapper.dark{
+  background-color: #363633;
+}
+
+.heroBannerTextWrapper{
+  background-color: #F3F3F3;
+}
+.heroBannerTextWrapper h1{
+  white-space: nowrap;
+}
+.heroBannerTextWrapper.dark p{
+  transition: 0.5s all;
+}
+.heroBannerTextWrapper.dark p {
+  color: #F3F3F3;
+}
+
+.heroBannerTextWrapper p, .heroBannerTextWrapper h1{
+  margin: 0;
+}
+
+.heroBannerTextWrapper p{
+  font-style: italic;
+}
+
+/* === Video === */
+
+.videoContainer video{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.videoContainer {
+  border: 0 solid #C5B377;
+  border-right-width: 5px;
+  height: 100vh;
+}
+
+/* === Buttons / Toggles === */
+
+.buttonContainer{
+  display: flex;
+  gap: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.darkToggleButton{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  right: 20px;
+  top: 20px;
+  background-color: #F3F3F3;
+}
+
+.dark .darkToggleButton{
+  background-color: #363633;
+}
+
+.darkToggleButton svg{
+  cursor: pointer;
+  height: 100%;
+  transition: 1s all;
+}
+
+.dark .darkToggleButton svg{
+  transform: rotate(180deg);
+}
+
+.solidButton{
+  background-color: var(--primary);
+  border: 3px solid var(--primary);
+  color: white;
+  white-space: nowrap;
+  margin-top: 30px;
+  padding: 7px 33px;
+}
+
+.borderedButton{
+  color: var(--primary);
+  white-space: nowrap;
+  border: 3px solid var(--primary);
+  margin-top: 30px;
+  padding: 7px 30px;
+  transition: 0.5s all;
+}
+
+.borderedButton:hover{
+  background-color: var(--primary);
+  color: #F3F3F3;
+}
+
+
+/* === Responsive For Tablet === */
+@media only screen and (max-width: 1300px){
+  .heroBanner, .heroBannerTextWrapper{
+    width: auto;
+    overflow-x: hidden;
+  }
+
+  .sectionContainer{
+    grid-template-columns: 250px 1fr;
+  }
+  
+}
+
+@media only screen and (max-width: 1000px){
+  .heroBanner{
+    justify-items: center;
+    width: auto;
+  }
+  .heroBannerTextWrapper{
+    padding: 40px;
+    text-align: center;
+    width: auto;
+  
+  }
+
+  .buttonContainer{
+    display: flex;
+    justify-content: center;
+  }
+ 
+}
+
+
+/* === Responsive For Mobile === */
+
+@media only screen and (max-width: 750px){
+  .heroBannerTextWrapper{
+    transition: 1s all;
+    padding: 20px;
+  }
+
+  .sectionContainer{
+    grid-template-columns: 1fr;
+  }
+
+  .videoContainer{
+    position: absolute;
+    width: 100%;
+    overflow-y: hidden;
+    border-width: 10px !important;
+    
+  }
+
+  .darkToggleButton{
+    z-index: 1;
+    padding: 10px;
+    height: 60px;
+    width: 60px;
+    bottom: 10px;
+    right: 10px;
+    transition: 1s all;
+    top: unset;
+  }
+
+  .darkToggleButton svg{
+    z-index: 1;
+    ;
+   
+  }
+
+}
+
