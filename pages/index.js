@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/home.module.css'
+import styles from '../styles/index.module.css'
 import Link from 'next/link'
 import { useState } from 'react'
 
