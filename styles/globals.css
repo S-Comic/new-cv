@@ -10,21 +10,6 @@ html,body {
   --secondary: #393939;
   overflow-x: hidden;
   max-width: 100vw;
-  --desktopMargin: 10vw;
-  --tabletMargin: 5vw;
-  --phone: 3vw;
-}
-
-.container {
-  margin: 0 var(--desktopMargin);
-  display: flex;
-  justify-content: center;
-}
-
-@media only screen and (max-width: 1000px){
-  .container {
-    margin: 0 var(--tabletMargin);
-  }
 }
 
 * {
@@ -39,10 +24,10 @@ html,body {
 
 h1, h2, h3, h4, h5, h6, p, a{
   font-family: 'Tiro Devanagari Hindi', serif;
-  color: var(--darkGrey);
+  color: #363633;
 }
 
-h1{font-size: 6em; font-weight: 300;}
+h1{font-size: 6em; font-weight: 300; color: var(--primary)}
 p, a{font-size: 1.5em;}
 
 
@@ -56,46 +41,8 @@ p, a{font-size: 1.5em;}
   p, a{font-size: 0.8em;}
 }
 
-.lightBackground h1{color: var(--primary);}
-.lightBackground p{color: var(--darkGrey);}
-
 a {
   color: inherit;
   text-decoration: none;
 }
 
-
-/* BUTTONS */
-
-.buttonContainer{
-  display: flex;
-  gap: 10px;
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-
-.solidButton{
-  background-color: var(--primary);
-  border: 3px solid var(--primary);
-  color: white;
-  white-space: nowrap;
-  margin-top: 30px;
-  padding: 7px 33px;
-}
-
-.borderedButton{
-  color: var(--primary);
-  white-space: nowrap;
-  border: 3px solid var(--primary);
-  margin-top: 30px;
-  padding: 7px 30px;
-  transition: 0.5s all;
-}
-
-.borderedButton:hover{color: white; background-color: var(--primary);}
-
-@media only screen and (max-width: 500px){
-  .solidButton{
-    padding: 7px 20px;
-  }
-}
