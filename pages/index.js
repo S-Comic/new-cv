@@ -1,11 +1,24 @@
 import Head from 'next/head'
-
+import { useEffect } from "react";
 import Link from 'next/link'
 import { useState } from 'react'
 
 export default function Home() {
 
   const [isDarkMode, setDarkMode] = useState(true)
+  
+
+  
+
+  useEffect(() => {
+    let vh = window.innerHeight * 0.01;
+    document.body.style.setProperty('--vh', `${vh}px`);
+    window.addEventListener('resize', () => {
+      let vh = window.innerHeight * 0.01;
+      document.body.style.setProperty('--vh', `${vh}px`);
+    })
+  });
+
 
   return (
 

@@ -8,8 +8,12 @@ html,body {
     background-color: #F3F3F3;
   --primary: #C5B377;
   --secondary: #393939;
+  --vh: 1vh;
   overflow-x: hidden;
   max-width: 100vw;
+  overflow-y: hidden;
+  height: 100%;
+  height: calc(var(--vh, 1vh) * 100);
 }
 
 * {
@@ -37,8 +41,8 @@ p, a{font-size: 1.5em;}
 }
 
 @media only screen and (max-width: 500px){
-  h1{ font-size: 2em; }
-  p, a{font-size: 0.8em;}
+  h1{ font-size: 2.5em; }
+  p, a{font-size: 1em;}
 }
 
 a {
