@@ -1,3 +1,13 @@
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes slideIn {
+  0% {width: 0;}
+  100% {width: 100%}
+}
+
 /* === Broad Sections / Wrappers === */
 
 .sectionContainer{
@@ -6,6 +16,7 @@
   overflow-y: hidden;
   transition: 1s all;
   height: calc(var(--vh) *100);
+  
 }
 
 .allContentWrapper{
@@ -13,6 +24,7 @@
   fill: var(--primary);
   transition: 1s all;
   height: calc(var(--vh) *100);
+  --videoWidth: 100%;
 }
 .allContentWrapper.dark{
   background-color: #363633;
@@ -39,8 +51,30 @@
   margin-left: 00px;
   background-color: none;
   transition: 1s all;
+  animation: fadeIn 1s ease-in-out;
 }
 
+.heroBannerTextWrapper *{
+  opacity: 0;
+}
+.heroBannerTextWrapper *:nth-child(1){
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 3s;
+}
+.heroBannerTextWrapper *:nth-child(2){
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 3s;
+}
+.heroBannerTextWrapper *:nth-child(3){
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 4s;
+}
+
+
+.heroBannerTextWrapper *:nth-child(4){
+  animation: fadeIn 0.5s ease-in-out forwards;
+  animation-delay: 5s;
+}
 .heroBannerTextWrapper.dark{
   background-color: #363633;
 }
@@ -78,6 +112,10 @@
   border: 0 solid #C5B377;
   border-right-width: 5px;
   height: calc(var(--vh) *100);
+  animation: slideIn 3s ease-in-out forwards;
+  animation-iteration-count: 1;
+  animation-delay: 0.3s;
+  width: 0;
 }
 
 /* === Buttons / Toggles === */
@@ -97,6 +135,7 @@
   transition: 1s all;
   top: 20px;
   background-color: #F3F3F3;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .dark .darkToggleButton{
@@ -173,6 +212,10 @@
 /* === Responsive For Mobile === */
 
 @media only screen and (max-width: 750px){
+  .heroBannerTextWrapper *{
+    animation-delay: 0s !important;
+  }
+
   .heroBanner{
     position: relative;
     height: calc(var(--vh) *100);
@@ -189,6 +232,7 @@
 
   .allContentWrapper{
     overflow-y: hidden;
+    --videoWidth: 100%;
   }
 
   .videoContainer{
@@ -198,6 +242,7 @@
     border-width: 10px !important;
     max-height: 100%;
     overflow-y: hidden;
+    animation: slideIn 0s;
   }
 
   .darkToggleButton{

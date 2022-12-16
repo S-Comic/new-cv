@@ -54,7 +54,7 @@ export default function Home() {
               Comfortable with pure CSS/HTML/JS & Wordpress,
               learning React. Lover of spreadsheets.</p>
             <div className="buttonContainer">
-              <Link href="mailto:me@samjule.dev"><a className="solidButton">Email</a></Link>
+              <Link href="mailto:me@samjule.dev"><a className="solidButton">Send me an email</a></Link>
               {/* <Link href="/"><a className="borderedButton">Download CV</a></Link> */}
             </div>
           </div>
