@@ -231,6 +231,14 @@
     margin: 0 10px 0 10px;
   }
 
+  .heroBannerTextWrapper h1{
+    padding-bottom: 10px;
+  }
+
+  .heroBannerTextWrapper p:last-of-type{
+    font-style: normal;
+  }
+
   .sectionContainer{
     grid-template-columns: 1fr;
     
