@@ -38,7 +38,7 @@ export default function Home() {
 
         <section className="videoContainer">
           <video autoPlay="autoplay" muted loop>
-            <source src="flowers.mp4" type="video/mp4" />
+            <source src="flowersbanner.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </section>
@@ -54,8 +54,8 @@ export default function Home() {
               Comfortable with pure CSS/HTML/JS & Wordpress,
               learning React. Lover of spreadsheets.</p>
             <div className="buttonContainer">
-              <Link href="mailto:samjule@outlook.com"><a className="solidButton">Email</a></Link>
-              <Link href="/"><a className="borderedButton">Download CV</a></Link>
+              <Link href="mailto:me@samjule.dev"><a className="solidButton">Email</a></Link>
+              {/* <Link href="/"><a className="borderedButton">Download CV</a></Link> */}
             </div>
           </div>
           
