@@ -3,6 +3,11 @@
   100% {opacity: 1;}
 }
 
+@keyframes fadeInFlowers {
+  0% {opacity: 0;}
+  100% {opacity: 0.4;}
+}
+
 @keyframes slideIn {
   0% {width: 0;}
   100% {width: 100%}
@@ -223,6 +228,7 @@
   .heroBannerTextWrapper{
     transition: 1s all;
     padding: 20px;
+    margin: 0 10px 0 10px;
   }
 
   .sectionContainer{
@@ -242,7 +248,15 @@
     border-width: 10px !important;
     max-height: 100%;
     overflow-y: hidden;
+    opacity: 1;
     animation: slideIn 0s;
+    
+  }
+
+  .videoContainer video{
+    animation: fadeInFlowers 5s ease-in forwards;
+    animation-delay: 3s;
+    opacity: 0;
   }
 
   .darkToggleButton{
